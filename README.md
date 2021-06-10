@@ -79,11 +79,12 @@ This will be features to come, something like this may be useful:
 
 Visit http://localhost:4444/edit
 You will get an online json editor where you can modify previous json into:
+```
 {
     orderedByExecution: {
                  [{ mode:"stub",   rrrr:"isRadioButtonOn",    value:false, pos: 1 },    // first call setIsRadioButtonOn will receive a false regardles sisRadioButtonOn
                   { mode:"assert", rrrr:"isRadioButtonOn",    value:false, pos: 2 },    // when input parameter is false an exception is logged/thrown
                   { mode:"mock",   rrrr:"isRadioButtonOn",    value:true,  pos:"3-4", input:undefined}] //when parameter is undefined return true the following 3-4 calls
     }
-...
+}
 ````

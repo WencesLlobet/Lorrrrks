@@ -1,4 +1,4 @@
-# logomok
+# Lorrrrks
 Logging, Stubbing, Mocking and Asserting for very stateful javascript manual tests
 
 
@@ -32,5 +32,23 @@ You will get:
                   { time:"2007-11-03T13:18:05", pos: 3, value:true } ]
     }
 }
+```
+
+Clean your code before commiting
+```
+$ npm install logomok -g
+$ logomok stash
+````
+
+Will result into:
+```
+     setIsRadioButtonOn(isRadioButtonOn)
+```
+review, commit, push, live your live...
+
+until you need the lorrrrks again
+
+```
+$ logomock stash pop
 ```
 

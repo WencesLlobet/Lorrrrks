@@ -1,15 +1,16 @@
 # Lorrrrks
 Logging, stubbing, mocking and asserting for very stateful javascript manual tests. But yes, mainly Logging.
+
 Because live is possibly perfect, but we are kind of blind to the internals.
 
 
 # Usage
 ```
 $ npm install logomok -g
-$ logomok start
+$ logomok start radio-button-incredible-feature
 ````
-Figure an assumption/goal on your code.
-Change your way to verify it, from:
+Figure an check you want to do on your code.
+Don't do it like this:
 ```
 var isRadioButtonOn = true
 for (i = 0; i < 3; i++) {
@@ -18,7 +19,7 @@ for (i = 0; i < 3; i++) {
   isRadioButtonOn = !isRadioButtonOn
 }
 ```
-to:
+try:
 ```
 var isRadioButtonOn = true
 for (i = 0; i < 3; i++) {
@@ -29,11 +30,10 @@ for (i = 0; i < 3; i++) {
 
 Run your manual steps!
 
-Visit http://localhost:4444/read
-You will get:
+Open ./.logmock/radio-button-incredible-feature.rrrr
+You will see:
 ```
 {
-    mode:"on-read",
     orderedByExecution: {
                  [{ rrrr:"isRadioButtonOn",    value:true,  pos: 1 },
                   { rrrr:"isRadioButtonOn",    value:false, pos: 2 },
@@ -41,14 +41,14 @@ You will get:
     }
 }
 ```
-Check it's what you expected. Fix if it's needed.
+Check it's what you expected. Do code needs fixing?
 
 Clean your code before commiting.
 ```
-$ logomok stash radio-button-incredible-feature
+$ logomok stash
 ````
 
-Will clean the code from this function:
+Will clean the code resulting into:
 ```
 var isRadioButtonOn = true
 for (i = 0; i < 3; i++) {
@@ -64,7 +64,7 @@ review, commit, push, live your live...
 $ logomock stash pop radio-button-incredible-feature
 ```
 
-Resulting into the follwing code (if possible, acording to the Great Incredible Tool merge rules (GIT)): 
+The code will get the lorrrrks back (only if possible, acording to the Great Incredible Tool merge rules (GIT)): 
 ```
 var isRadioButtonOn = true
 for (i = 0; i < 3; i++) {
@@ -73,12 +73,12 @@ for (i = 0; i < 3; i++) {
 }
 ```
 
-# Title says Mocking, Stubbing and Asserting as well...
+# Repo headline says Mocking, Stubbing and Asserting as well...
 
-This will be features to come, something like this may be useful:
+This could be features to come, something like this may be useful:
 
-Visit http://localhost:4444/edit
-You will get an online json editor where you can modify previous json into:
+Open ./.logmock/radio-button-incredible-feature.rrrr
+and add the follwing 'mode' and input attributes
 ```
 {
     orderedByExecution: {

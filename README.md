@@ -1,6 +1,6 @@
 # Lorrrrks
-Logging, Stubbing, Mocking and Asserting for very stateful javascript manual tests. 
-Because live is possibly perfect, but we are kind of blind to its internals.
+Logging, stubbing, mocking and asserting for very stateful javascript manual tests. But yes, mainly Logging.
+Because live is possibly perfect, but we are kind of blind to the internals.
 
 
 # Usage
@@ -48,7 +48,7 @@ Clean your code before commiting.
 $ logomok stash radio-button-incredible-feature
 ````
 
-Will result into:
+Will clean the code from this function:
 ```
 var isRadioButtonOn = true
 for (i = 0; i < 3; i++) {
@@ -88,3 +88,4 @@ You will get an online json editor where you can modify previous json into:
     }
 }
 ````
+Combining the read and the edit mode can result into a manually generated "goldish masterish" tests
